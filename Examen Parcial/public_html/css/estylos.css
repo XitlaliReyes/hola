@@ -5,11 +5,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding: 1px 5px;
     
 }
 
+
 .container{
     font-size: small;
+    
+}
 
+.w-100-height{
+    height: 100vh;
+    width: 100%;
 }

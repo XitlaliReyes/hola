@@ -105,6 +105,80 @@ ul li {
 }
 
 
+.conta{background-image: url(../img/Contac.png);}
+.contenedor{
+    width: 100%;
+    font-size: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    'enca enca'
+    'formulariou cont2 '
+    'formulariou cont3 '
+    'formulariou cont4 '
+    'mapa mapa'
+    'pdp pdp';
+}
+
+.contenedor>div, 
+.contenedor .enca,
+.contenedor .cont1,
+.contenedor .cont2,
+.contenedor .cont3,
+.contenedor .cont4,
+.contenedor .formulariou,
+.contenedor .mapa
+.contenedor .pdp{
+    background-color: rgba(97, 92, 92, 0.2);
+    color: white;
+    border: 2px solid orchid;
+    box-shadow: 0 0 3px orchid, 0 0 6px orchid;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .cont2,
+.contenedor .cont3,
+.contenedor .cont4{
+width: auto;
+}
+
+.formu{border: 5px dashed black;}
+
+.boton{
+    background-color: aqua;
+    padding: 2%;
+    border-radius: 7px;
+    border: transparent;
+}
+
+.boton:hover{
+    box-shadow: 0 0 3px orchid, 0 0 6px orchid;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
+#nombre, #telefono, #correo, #msj{
+    border: 7px ridge black;
+    margin: 2%;
+    width: 700px;
+
+}
+
+
+.enca { grid-area: header; }
+.cont2 { grid-area: cont2; }
+.cont3 { grid-area: cont3; }
+.cont4 { grid-area: cont4; }
+.formulariou { 
+    grid-area: formulariou; 
+    text-align: center;
+    width: 800px;
+}
+.mapa{ grid-area: mapa;}
+.pdp{ grid-area: footer; }
+
 
 
 

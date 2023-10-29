@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="../public_html/css/estylos.css">
 </head>
 <body>
-    <?php include 'header.html';?>
-    
+    <?php require 'vistas/Login_form/header2.php';?>
     <?php include 'vistas/inicio.html';?>
     <?php include 'footer.html';?>
 </body>

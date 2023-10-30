@@ -252,16 +252,16 @@ width: auto;
     color: #fff;
 }
 .card1{
-    background-image: url(../img/inova.png);
+    background-image: url(img/inova.png);
 }
 .card2{
-    background-image: url(../img/calidad.png);
+    background-image: url(img/calidad.png);
 }
 .card4{
-    background-image: url(../img/cliente.png);
+    background-image: url(img/cliente.png);
 }
 .card5{
-    background-image: url(../img/etica.png);
+    background-image: url(img/etica.png);
 }
 .card3:hover{
     transform: translateY(-10px);
@@ -289,7 +289,7 @@ width: auto;
 
 
 .project{
-    background-image: url(../img/fndproyecto.jpg);
+    background-image: url(img/fndproyecto.jpg);
     background-size: auto;
     
 }

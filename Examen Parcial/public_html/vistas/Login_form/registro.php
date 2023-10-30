@@ -34,7 +34,7 @@ require '../../header2.php';;
         echo "<br> Cuenta dada de alta <br>";
     }
     fclose($file);
-    echo "<br><a href='formulario.php'>regresar</a>";
+    echo "<br><a href='../../index.php'>regresar</a>";
 
 ?>
 </div>

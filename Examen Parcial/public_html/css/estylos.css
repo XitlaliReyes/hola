@@ -103,6 +103,9 @@ ul li {
     border-bottom: 2px solid #CE95D8;
     padding-bottom: 5px;
 }
+.imageinicio{
+    background-image: url(../img/back.jpg);
+}
 
 
 .conta{background-image: url(../img/Contac.png);}

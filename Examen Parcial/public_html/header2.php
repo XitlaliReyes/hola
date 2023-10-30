@@ -13,9 +13,9 @@
         </button>
         <div class="collapse navbar-collapse" id="exCollapsingNavbar">
             <ul class="nav navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link text-white">Inicio</a></li>
-                <li class="nav-item"><a href="../public_html/vistas/nosotros.php" class="nav-link text-white">¿Qué hacemos?</a></li>
-                <li class="nav-item"><a href="../public_html/vistas/contactanos.php" class="nav-link text-white">Contacto</a></li>
+                <li class="nav-item"><a href="index.php" class="nav-link text-white">Inicio</a></li>
+                <li class="nav-item"><a href="nosotros.php" class="nav-link text-white">¿Qué hacemos?</a></li>
+                <li class="nav-item"><a href="contactanos.php" class="nav-link text-white">Contacto</a></li>
             </ul>
             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                 <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>

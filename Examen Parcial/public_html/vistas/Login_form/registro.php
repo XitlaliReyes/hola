@@ -1,7 +1,7 @@
 <body>
 <?php
  
-require 'header2.php';
+require '../../header2.php';;
 
 ?>
 <div style="margin:100px;">

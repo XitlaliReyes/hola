@@ -1,7 +1,7 @@
 <?php
 ob_start(); //por si no funciona el header location (activa almacenamiento en buffer de salida)
 $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"]; //nombre del servidor(dominio) en el que estas actualmente
-require 'header2.php';
+require '../../header2.php';
 
 ?>
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ require 'header2.php';
 
         # Luego redireccionamos a la pagina "Secreta"
         # redireccionamiento con php
-        header("Location: vacantes.php");
+        header("Location: ../../vacantes.php");
         // require 'vacantes.php';
         //header("Location:".$base_url."secreta.php");
 

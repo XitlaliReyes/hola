@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="../public_html/css/estylos.css">
 </head>
 <body>
-    <?php require 'vistas/Login_form/header2.php';?>
-    <?php include 'vistas/inicio.html';?>
-    <?php include 'footer.html';?>
+    
+    <?php 
+    session_start();
+    if (!empty($_SESSION["usuario"])) {
+        require 'header3.php';
+    }else{
+        require 'header2.php';
+    }
+    require 'vistas/inicio.html';
+    require 'footer.html';
+    ?>
 </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +15,7 @@
 
 <body class="conta">
         <main class="enca">
-        <?php 
-            session_start();
+        <?php
             if (empty($_SESSION["usuario"])) {
                 include 'header2.php';
             }else{
@@ -28,10 +30,10 @@
             <p>Llena nuestro formulario para que uno de nuestros especialistas 
                 se ponga en contacto contigo y podamos agendar tu consultoría gratuita
             </p>
-            <form method="post" action="">
+            <form method="post" action="correo.php">
                 <fieldset class="formu">
                     <input type="text" placeholder="Nombre" id="nombre" name="username" required><br>
-                    <input type="email" placeholder="Correo" id="correo" name="correoe" required><br>
+                    <input type="email" placeholder="Correo" id="correo" name="correo" required><br>
                     <input type="tel" placeholder="Telefono" name="telefono" id="telefono" required><br>
                     <textarea placeholder="Mensaje" id="msj" name="msj"></textarea><br>
                     <input type="submit" value="Enviar" class="boton">

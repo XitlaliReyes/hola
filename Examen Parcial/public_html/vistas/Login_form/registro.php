@@ -1,9 +1,9 @@
-<body>
 <?php
  
 require '../../header2.php';;
 
 ?>
+<body>
 <div style="margin:100px;">
 <?php
      

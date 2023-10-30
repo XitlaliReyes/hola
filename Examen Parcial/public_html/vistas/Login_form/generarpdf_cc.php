@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
 require('fpdf/fpdf.php');
-
 //Generar PDF
 class PDF extends FPDF
     {
@@ -28,8 +27,8 @@ class PDF extends FPDF
     $pdf->SetMargins(20, 20, 20);
     $pdf->AddPage();
 
-    $pdf->Image('hola\Examen Parcial\public_html\img\LogoTemp2.png', 95, 3, 20, 20, 'PNG');     
-    $pdf->Image('hola\Examen Parcial\public_html\img\Firma.png', 75, 220, 50, 50, 'PNG');     
+    $pdf->Image('../../img/LogoTemp2.png', 95, 3, 20, 20, 'PNG');     
+    $pdf->Image('../../img/Firma.png', 75, 220, 50, 50, 'PNG');     
     $nombre = $_POST['nombre'];
     $apellidoPaterno = $_POST['apellidoP'];
     $apellidoMaterno = $_POST['apellidoM'];

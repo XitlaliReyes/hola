@@ -7,10 +7,9 @@ class PDF extends FPDF
     {
         function Header()
         {
-            // Logo de la empresa
             $this->SetFont('Arial', 'I', 8);
             $this->Cell(0, 10, 'CODECRAFTERS', 0, 1, 'C');
-            $this->Ln(30); 
+            $this->Ln(15); 
         }
     
         function Footer()
@@ -18,7 +17,7 @@ class PDF extends FPDF
             $this->SetY(-15);
             $this->SetFont('Arial', 'I', 8);
             $this->Cell(0, 10, 'Pagina ' . $this->PageNo(), 0, 0, 'C');
-    
+     
             $this->SetLineWidth(0.5); 
             $this->SetDrawColor(0, 0, 0); 
             $this->Line(10, $this->GetY(), 200, $this->GetY()); 
@@ -28,7 +27,9 @@ class PDF extends FPDF
     $pdf = new PDF();
     $pdf->SetMargins(20, 20, 20);
     $pdf->AddPage();
-    
+
+    $pdf->Image('hola\Examen Parcial\public_html\img\LogoTemp2.png', 95, 3, 20, 20, 'PNG');     
+    $pdf->Image('hola\Examen Parcial\public_html\img\Firma.png', 75, 220, 50, 50, 'PNG');     
     $nombre = $_POST['nombre'];
     $apellidoPaterno = $_POST['apellidoP'];
     $apellidoMaterno = $_POST['apellidoM'];
@@ -43,21 +44,28 @@ class PDF extends FPDF
     $puesto = $_POST['puesto'];
     $cod = '';
     
+    $pdf->Line(70, 250, 140, 250);
     $pdf->SetFont('Arial', '', 12); 
     $pdf->Cell(0, 10, "Solicitud de Puesto en Codecrafters", 0, 1, 'C');
     $pdf->Cell(0, 10, "Por medio del presente documento, solicito el puesto de:", 0, 1, 'C');
     $pdf->MultiCell(0, 10, $puesto, 0, 'C');
-    $pdf->Ln(10);
-    $pdf->Cell(0, 10, "Informacion Personal:", 0, 1, 'C');
-    $pdf->Cell(0, 10, "Nombre: $nombre $apellidoPaterno $apellidoMaterno", 0, 1, 'L');
-    $pdf->Cell(0, 10, "Telefono: $telefono", 0, 1, 'L');
-    $pdf->Cell(0, 10, "Fecha de Nacimiento: $diaNacimiento/$mesNacimiento/$aNacimiento", 0, 1, 'L');
-    $pdf->Cell(0, 10, "Lenguajes de Programacion que domina: " . implode(", ", $lenguajes), 0, 1, 'L');
-    $pdf->Cell(0, 10, "Disponibilidad para viajar: $disponibilidadViajar", 0, 1, 'L');
-    $pdf->Cell(0, 10, "Disponibilidad para cambio de residencia: $disponibilidadResidencia", 0, 1, 'L');
-    $pdf->Cell(0, 10, "Nivel de Ingles: $ingles", 0, 1, 'L');
+    $pdf->Cell(0, 10,"El dia de ".date('d/m/Y'),0,1,'C');
+    $pdf->SetFont('Arial', 'B', 12); 
+    $pdf->Cell(0, 10, "Informacion del Aspirante:", 0, 1, 'C');
+    $pdf->SetFont('Arial', '', 12); 
+    $pdf->MultiCell(0, 7, "El aspirante,  $nombre $apellidoPaterno $apellidoMaterno, por medio del presente documento, solicita el puesto de: '$puesto' para  tener la posibilidad de contribuir a la mision de Codecrafters y formar parte de un equipo con dedicacion. 
+Con el telefono: $telefono
+Posicion deseada: $puesto 
+Fecha de nacimiento: $diaNacimiento/$mesNacimiento/$aNacimiento
+$nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en los lenguajes de programacion como: ", 0, 'J', 0);
+    $pdf->Cell(0, 7, "" . implode(", ", $lenguajes), 0, 1, 'L');
+    $pdf->SetFont('Arial', 'B', 12); 
+    $pdf->Cell(0, 7, "Informacion adicional del aspirante", 0, 1, 'C');
+    $pdf->SetFont('Arial', '', 12); 
+    $pdf->Cell(0, 7, "Cuenta con disponibilidad para viajar?: $disponibilidadViajar", 0, 1, 'L');
+    $pdf->Cell(0, 7, "Cuanta con disponibilidad para cambio de residencia?: $disponibilidadResidencia", 0, 1, 'L');
+    $pdf->Cell(0, 7, "Cuenta con un Nbuen nivel de Ingles?: $ingles", 0, 1, 'L');
     $codigoAleatorio = generarCodigoAleatorio(10);
-
     $usuario = $_SESSION["usuario"];
     $email = $_SESSION["email"];
     $archivo = "archivo1.txt";
@@ -93,9 +101,17 @@ class PDF extends FPDF
 
     if (!$encontrado) {
         fwrite($file, $usuario . " " . $codigoAleatorio . " " . $email . " false\r\n");
-        $pdf->Cell(0, 10, "Codigo: $codigoAleatorio");
+        $pdf->Cell(0, 10, "El codigo para realizar el examen es: $codigoAleatorio", 0, 1, 'L');
+        $pdf->Ln(55);
+        $pdf->Cell(0, 65, "Firma", 0, 1, 'C');    
+        $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,0,'C'); 
+        $pdf->Cell(0,5,'DIRECTOR',0,0,'C'); 
     }else{
-        $pdf->Cell(0, 10, "Este usuario ya tiene un codigo asignado, por favor revisa tu primer documento");
+        $pdf->Cell(0, 10, "Tu codigo ya ha sido asignado, por favor revisa el primer documento generado", 0, 1, 'L');
+        $pdf->Ln(55);
+        $pdf->Cell(0, 10, "Firma", 0, 1, 'C');    
+        $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,1,'C'); 
+        $pdf->Cell(0,5,'DIRECTOR',0,1,'C'); 
     }
     
     fclose($file);
@@ -109,6 +125,7 @@ class PDF extends FPDF
         
         return $codigo;
     }
-    
+
+
     $pdf->Output();
 ?>

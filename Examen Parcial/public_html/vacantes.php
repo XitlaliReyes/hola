@@ -49,7 +49,7 @@ if (empty($_SESSION["usuario"])) {
                 }
                 echo "<br><br><h1 style='color:white;'>$saludo " . $_SESSION["usuario"] . " bienvenido(a).</h1>"; ?>
                 <p style="color:aliceblue">Únete a Nuestra Aventura en CodeCrafters!</p>
-                <button class="btn btn-light px-5 py-2">Revisar Vacantes</button>
+                <button class="btn btn-light btn-link px-5 py-2" ><a href="#vacantes">LLenar Formulario</a></button>
                 <button onclick="window.location.href = 'ingresar_codigo.php';" class="btn btn-light px-5 py-2">Aplicar Examen</button>
             </div>
             <div class="col-md-5 col-sm-12">
@@ -89,7 +89,7 @@ if (empty($_SESSION["usuario"])) {
         </div>
     </section>
 
-    <section class="section-2 container-fluid p-0" id="vacantes">
+    <section class="section-2 container-fluid p-0" >
         <div class="cover">
             <div class="contenido text-center">
                 <h1>Conoce Nuestras Vacantes</h1>
@@ -161,10 +161,10 @@ if (empty($_SESSION["usuario"])) {
 </section>
 
     <section>
-        <div class="split-screen">
+        <div class="split-screen"  id="vacantes">
             <div class="left">
                 <section class="copy">
-                    <h5>Aplicación para Vacante en CodeCrafters</h5>
+                    <h5 >Aplicación para Vacante en CodeCrafters</h5>
                     <p>Completa el formulario para aplicar a una de nuestras vacantes disponibles.</p>
                 </section>
             </div>

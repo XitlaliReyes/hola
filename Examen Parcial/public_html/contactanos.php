@@ -58,8 +58,8 @@
             </p>
         </div>
         <div class="inte">
-            <p><img src="../public_html/img/Chris.jpg" width="100" height="100" alt="holis">Christopher Martinez Gonzalez <br>Redes sociales <br><a href=""><i class="fab fa-instagram fa-1x" style="color: #CE95D8;"></i></a>Instagram<br><i class="fa-brands fa-twitter fa-1x" style="color: #CE95D8;"></i>Twitter</p>
-            <p><img src="" alt="holis 2"><br>Valeria Nuñez de Lira <br>Redes sociales <br><a href="#"><i class="fab fa-instagram fa-1x" style="color: #CE95D8;"></i></a>Instagrambr <br><i class="fa-brands fa-twitter fa-1x" style="color: #CE95D8;"></i>Twitter</p>
+            <p><img src="../public_html/img/Chris.jpg" width="100" height="100" alt="holis"><br>Christopher Martinez Gonzalez <br>Redes sociales <br><a href=""><i class="fab fa-instagram fa-1x" style="color: #CE95D8;"></i></a>Instagram<br><i class="fa-brands fa-twitter fa-1x" style="color: #CE95D8;"></i>Twitter</p>
+            <p><img src="../public_html/img/vale.jpeg" width="100" height="100" alt="holis 2"><br>Valeria Nuñez de Lira <br>Redes sociales <br><a href="#"><i class="fab fa-instagram fa-1x" style="color: #CE95D8;"></i></a>Instagrambr <br><i class="fa-brands fa-twitter fa-1x" style="color: #CE95D8;"></i>Twitter</p>
             <p><img src="" alt="holis 3"><br>Xitlali Sarahi Reyes Reyes <br>Redes sociales <br><a href="#"><i class="fab fa-instagram fa-1x" style="color: #CE95D8;"></i></a>Instagram<br><i class="fa-brands fa-twitter fa-1x" style="color: #CE95D8;"></i>Twitter</p>
         </div>
         <div class="mapa">

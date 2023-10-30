@@ -32,7 +32,19 @@ if (empty($_SESSION["usuario"])) {
         <div class="row">
             <div class="col-md-7 col-sm-12">
                 <br><br>
-                <?php echo "<br><br><h1>Bienvenido(a) " . $_SESSION["usuario"] . "</h1>"; ?>
+                <?php 
+                date_default_timezone_set('America/Mexico_City'); // Configura la zona horaria
+                
+                $hora = date("G"); // Obtiene la hora en formato de 24 horas
+                $saludo = '';
+                if ($hora >= 5 && $hora < 12) {
+                    $saludo = "Buenos días";
+                } elseif ($hora >= 12 && $hora < 19) {
+                    $saludo = "Buenas tardes";
+                } else {
+                    $saludo = "Buenas noches";
+                }
+                echo "<br><br><h1>$saludo " . $_SESSION["usuario"] . " bienvenido(a).</h1>"; ?>
                 <p>Únete a Nuestra Aventura en CodeCrafters!</p>
                 <button class="btn btn-light px-5 py-2">Revisar Vacantes</button>
             </div>

@@ -2,7 +2,8 @@
 <?php
 ob_start(); //por si no funciona el header location (activa almacenamiento en buffer de salida)
 $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"]; //nombre del servidor(dominio) en el que estas actualmente
-require 'header2.php';
+session_start();
+require 'header3.php';
 
 ?>
 
@@ -11,14 +12,12 @@ require 'header2.php';
 <?php
 
 # Iniciar sesión para usar $_SESSION
-session_start();
 
 if (empty($_SESSION["usuario"])) {
     header("../../index.php");
     exit();
 }
-// le indicamos al usuario un boton para salir
-echo '<button onclick="window.location.href = \'logout.php\'">Cerrar sesión</button>';
+
 echo "<br><br><h1>Bienvenido(a) " . $_SESSION["usuario"] . "</h1>";
 ?>
 <p>

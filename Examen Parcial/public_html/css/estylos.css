@@ -448,7 +448,10 @@ button.btn-light{
     padding: 20vmin 0;
 
 }
-
+.btn-link a{
+    text-decoration: none;
+    color: inherit;
+}
 .seccion-V .row .col-md-6 .pray img{
     opacity: 0.8;
     width: 90%;
@@ -588,4 +591,10 @@ label{
     border-bottom:5px solid #78407a;
 
     
+}
+
+.error-message-text {
+    font-weight: bold; 
+    display: block; 
+    color: red; 
 }

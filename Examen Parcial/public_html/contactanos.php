@@ -9,6 +9,9 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/estylos.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
 	<title>Contactanos</title>
 </head>
 

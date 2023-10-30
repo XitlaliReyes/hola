@@ -47,7 +47,7 @@ if (empty($_SESSION["usuario"])) {
                 echo "<br><br><h1 style='color:white;'>$saludo " . $_SESSION["usuario"] . " bienvenido(a).</h1>"; ?>
                 <p style="color:aliceblue">Únete a Nuestra Aventura en CodeCrafters!</p>
                 <button class="btn btn-light px-5 py-2">Revisar Vacantes</button>
-                <button class="btn btn-light px-5 py-2" action="">Aplicar Examen</button>
+                <button onclick="window.location.href = 'ingresar_codigo.php';" class="btn btn-light px-5 py-2">Aplicar Examen</button>
             </div>
             <div class="col-md-5 col-sm-12">
                 <img src="img/software.png" alt="hola" class="img-fluid">

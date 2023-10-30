@@ -1,4 +1,5 @@
 <?php
+session_start();
 ob_start(); //por si no funciona el header location (activa almacenamiento en buffer de salida)
 $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"]; //nombre del servidor(dominio) en el que estas actualmente
 require '../../header2.php';
@@ -44,9 +45,6 @@ require '../../header2.php';
 
     # Luego de haber obtenido los valores, ya podemos comprobar:
     if ($band == 1) {
-
-        session_start();
-
         $_SESSION["usuario"] = $usuario;
         $_SESSION["email"] = $email;
 

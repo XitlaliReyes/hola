@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +13,6 @@
 <?php
 ob_start(); //por si no funciona el header location (activa almacenamiento en buffer de salida)
 $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"]; //nombre del servidor(dominio) en el que estas actualmente
-session_start();
 include 'header3.php';
 
 ?>

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +15,7 @@
 
 <body class="conta">
         <main class="enca">
-        <?php 
-            session_start();
+        <?php
             if (empty($_SESSION["usuario"])) {
                 include 'header2.php';
             }else{

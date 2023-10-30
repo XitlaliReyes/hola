@@ -149,7 +149,7 @@ width: auto;
 .formu{border: 5px dashed black;}
 
 .boton{
-    background-color: aqua;
+    background-color: rgb(28, 31, 31);
     padding: 2%;
     border-radius: 7px;
     border: transparent;
@@ -252,16 +252,16 @@ width: auto;
     color: #fff;
 }
 .card1{
-    background-image: url(img/inova.png);
+    background-image: url(../img/inova.png);
 }
 .card2{
-    background-image: url(img/calidad.png);
+    background-image: url(../img/calidad.png);
 }
 .card4{
-    background-image: url(img/cliente.png);
+    background-image: url(../img/cliente.png);
 }
 .card5{
-    background-image: url(img/etica.png);
+    background-image: url(../img/etica.png);
 }
 .card3:hover{
     transform: translateY(-10px);
@@ -289,7 +289,7 @@ width: auto;
 
 
 .project{
-    background-image: url(img/fndproyecto.jpg);
+    background-image: url(../img/fndproyecto.jpg);
     background-size: auto;
     
 }
@@ -330,3 +330,34 @@ width: auto;
     font-size: 24px;
     margin-bottom: 10px;
 }
+
+
+.hidden-checkbox {
+    display: none;
+}
+
+/* Ocultar las vacantes ocultas inicialmente */
+.vacantes-ocultas {
+    display: none;
+}
+
+/* Mostrar las vacantes ocultas cuando el checkbox está marcado */
+.hidden-checkbox:checked + .vacantes-ocultas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilos para la flecha */
+.rect.flecha {
+    cursor: pointer;
+}
+/* Ajusta el tamaño máximo de las imágenes dentro de los rect */
+.rect img {
+    max-width: 100%;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+}
+
+

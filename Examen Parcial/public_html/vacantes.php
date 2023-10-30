@@ -1,3 +1,11 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estylos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Vacantes</title>
+    
+</head>
 <body>
 <?php
 ob_start(); //por si no funciona el header location (activa almacenamiento en buffer de salida)
@@ -6,9 +14,6 @@ session_start();
 include 'header3.php';
 
 ?>
-
-<div style="margin:100px;">
-
 <?php
 
 # Iniciar sesión para usar $_SESSION
@@ -18,55 +23,148 @@ if (empty($_SESSION["usuario"])) {
     exit();
 }
 
-echo "<br><br><h1>Bienvenido(a) " . $_SESSION["usuario"] . "</h1>";
 ?>
-<p>
-    Soy una pagina que solo pueden ver los usuarios logueados
-</p>
-<pre>
-                            Codecrafters: Donde la Innovación y la Creatividad se Unen
 
-Nuestra Cultura: En Codecrafters, valoramos la innovación, la creatividad y la excelencia en el desarrollo de software. Nuestra cultura fomenta un ambiente de trabajo colaborativo y de aprendizaje continuo. Algunos aspectos destacados de nuestra cultura incluyen:
+<section class="carrusel-V">
+    <div class="principal text-center">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <br><br>
+                <?php echo "<br><br><h1>Bienvenido(a) " . $_SESSION["usuario"] . "</h1>"; ?>
+                <p>Únete a Nuestra Aventura en CodeCrafters!</p>
+                <button class="btn btn-light px-5 py-2">Revisar Vacantes</button>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <img src="img/software.png" alt="hola" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
 
-Colaboración: Fomentamos la colaboración entre equipos y departamentos. Creemos que las mejores ideas surgen cuando trabajamos juntos.
 
-Crecimiento Profesional: Ofrecemos oportunidades de aprendizaje y desarrollo continuo. Ya sea a través de capacitaciones, conferencias o proyectos desafiantes, siempre estamos buscando formas de ayudar a nuestros empleados a crecer en sus carreras.
+<main class="contenedorV">
+    <section class="seccion-V">
+        <div class="container-V text-center">
+            <div class="row">
+                <div class="col-md-6" id="elemento1">
+                    <img src="img/vacante1.jpg" alt="">
+                </div>
+                <div class="col-md-6" id="elemento2">
+                    <div class="div panel text-left">
+                        <h1>Codecrafters: Donde la Innovación y la Creatividad se Unen</h1>
+                        <p class="pt-4">En Codecrafters, nos enorgullece ofrecer una variedad de beneficios para nuestros empleados. Algunos de los beneficios que disfrutarás como parte de nuestro equipo incluyen:
+                            <ul>
+                                <li>Seguro de Salud Completo: Ofrecemos un sólido plan de seguro médico y dental para nuestros empleados y sus familias.</li>
+                                <li>Desarrollo Profesional: Invertimos en tu crecimiento profesional, ofreciendo oportunidades de capacitación y desarrollo continuo.</li>
+                                <li>Horario Flexible: Entendemos la importancia del equilibrio entre trabajo y vida personal. Ofrecemos horarios flexibles y opciones de trabajo remoto.</li>
+                            </ul>
+                        </p>
+                        <p> En Codecrafters, valoramos la innovación, la creatividad y la excelencia en el desarrollo de software. Nuestra cultura fomenta un ambiente de trabajo colaborativo y de aprendizaje continuo. 
+                            En Codecrafters, te unirás a un equipo apasionado de profesionales de desarrollo de software que comparten una visión común: impulsar la innovación a través de la tecnología. ¡Esperamos verte crecer y prosperar en Codecrafters mientras contribuyes a nuestra misión de transformar ideas en soluciones tecnológicas excepcionales!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Innovación: Valoramos la creatividad y la innovación. Animamos a nuestros empleados a proponer nuevas ideas y enfoques para los desafíos técnicos.
+    <section class="section-2 container-fluid p-0">
+        <div class="cover">
+            <div class="contenido text-center">
+                <h1>Conoce Nuestras Vacantes</h1>
+                <p>
+                Si compartes nuestra pasión por la tecnología y estás listo para hacer una diferencia, ¡queremos conocerte!
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid text-center">
+    <div class="vacantes row">
+        <div class="col-md-6 col-lg-4">
+            <div class="rect">
+                <h5>Desarrollador Back-End</h5>
+                <img src="img/back-end.png" alt="imagen1" class="img-fluid">
+                <a href="#enlace-vacante-1" class="btn btn-primary">Aplicar</a>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="rect">
+                <h5>Arquitecto de Software</h5>
+                <img src="img/desarrollador.png" alt="imagen2" class="img-fluid">
+                <a href="#enlace-vacante-2" class="btn btn-primary">Aplicar</a>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="rect">
+                <h5>Especialista en Inteligencia Artificial</h5>
+                <img src="img/IA.png" alt="imagen3" class="img-fluid">
+                <a href="#enlace-vacante-3" class="btn btn-primary">Aplicar</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
 
-Diversidad e Inclusión: Creemos en la importancia de la diversidad y la inclusión. Nuestra empresa es un lugar donde personas de diferentes orígenes y experiencias se sienten valoradas y respetadas.
+<!-- Checkbox oculto y contenido de vacantes adicionales -->
+        <input type="checkbox" id="mostrarMasCheckbox" class="hidden-checkbox">
+        <div class="container text-center vacantes-ocultas">
+            <div class="vacantes row">
+            <div class="col-md-6 col-lg-4">
+                <div class="rect">
+                        <h5>Especialista en Blockchain</h5>
+                        <img src="img/blockchain.png" alt="imagen4" class="img-fluid">
+                        <a href="#enlace-vacante-4" class="btn btn-primary">Aplicar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="rect">
+                        <h5>Desarrollador Front-End</h5>
+                        <img src="img/front-end.png" alt="imagen5" class="img-fluid">
+                        <a href="#enlace-vacante-5" class="btn btn-primary">Aplicar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="rect">
+                        <h5>Ingeniero de devOps</h5>
+                        <img src="img/software.png" alt="imagen6" class="img-fluid">
+                        <a href="#enlace-vacante-6" class="btn btn-primary">Aplicar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="rect">
+                        <h5>Automatización de Pruebas</h5>
+                        <img src="img/pruebas.png" alt="imagen6" class="img-fluid">
+                        <a href="#enlace-vacante-6" class="btn btn-primary">Aplicar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="rect">
+                        <h5>UX Designer</h5>
+                        <img src="img/designer.png" alt="imagen6" class="img-fluid">
+                        <a href="#enlace-vacante-6" class="btn btn-primary">Aplicar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-Equilibrio entre Trabajo y Vida: Reconocemos la importancia de un equilibrio saludable entre el trabajo y la vida personal. Ofrecemos flexibilidad en horarios y opciones de trabajo remoto.
+        <label for="mostrarMasCheckbox" class="rect flecha">
+            <img src="flecha.png" alt="Mostrar Más">
+        </label>
 
-Nuestros Beneficios:
+</section>
 
-En Codecrafters, nos enorgullece ofrecer una variedad de beneficios para nuestros empleados. Algunos de los beneficios que disfrutarás como parte de nuestro equipo incluyen:
+    <section>
+        
+    </section>
 
-- Seguro de Salud Completo: Ofrecemos un sólido plan de seguro médico y dental para nuestros empleados y sus familias.
-
-- Desarrollo Profesional: Invertimos en tu crecimiento profesional, ofreciendo oportunidades de capacitación y desarrollo continuo.
-
-- Horario Flexible: Entendemos la importancia del equilibrio entre trabajo y vida personal. Ofrecemos horarios flexibles y opciones de trabajo remoto.
-
-- Ambiente de Trabajo Creativo: Nuestra oficina es un lugar inspirador, diseñado para fomentar la creatividad y la colaboración.
-
-- Días de Vacaciones Generosos: Ofrecemos una generosa cantidad de días de vacaciones pagadas para que puedas recargar energías y disfrutar de tu tiempo libre.
-
-- Participación en Proyectos Emocionantes: Trabajarás en proyectos innovadores y emocionantes que desafiarán tus habilidades y te permitirán crecer como profesional.
-
-- Reconocimiento y Recompensas: Reconocemos y recompensamos el arduo trabajo y el desempeño excepcional de nuestros empleados.
-
-En Codecrafters, te unirás a un equipo apasionado de profesionales de desarrollo de software que comparten una visión común: impulsar la innovación a través de la tecnología. ¡Esperamos verte crecer y prosperar en Codecrafters mientras contribuyes a nuestra misión de transformar ideas en soluciones tecnológicas excepcionales!
-</pre>
-
-<details>
+</main>
+<!-- <details>
     <summary>Se parte de nuestro equipo</summary>
     <h3>Llena el siguiente formulario</h3>
     <form class="needs-validation" novalidate method="post" action="vistas/Login_form/validar_perfil.php" enctype="multipart/form-data">
     <div class="form-row">
         <div class="form-group col-md-4">
         <label for="Nombre">Nombre</label>
-        <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+        <input name="name" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
         </div>
         <div class="form-group col-md-4">
         <label for="ApellidoP">Apellido Paterno</label>
@@ -79,7 +177,7 @@ En Codecrafters, te unirás a un equipo apasionado de profesionales de desarroll
     </div>
     <div class="form-group">
         <label for="inputel">Teléfono</label>
-        <input name="telefono" type="text" class="form-control" id="telefono" placeholder="4491234567" required>
+        <input name="telephone" type="text" class="form-control" id="telefono" placeholder="4491234567" required>
     </div>
 
     <!-- Subir foto -->
@@ -229,7 +327,7 @@ En Codecrafters, te unirás a un equipo apasionado de profesionales de desarroll
     </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
-</details>
+</details> -->
 </body>
 <?php
     include "footer.html";    

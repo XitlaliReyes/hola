@@ -267,7 +267,7 @@ if (empty($_SESSION["usuario"])) {
                                         </div>
                                 </div>
                                 
-                                <br><p>Disponibilidad para viajar</p>
+                                    <br><p>Disponibilidad para viajar</p>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="inlineRadio1" value="si">
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
@@ -276,16 +276,26 @@ if (empty($_SESSION["usuario"])) {
                                         <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="inlineRadio2" value="no">
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
+
+                                    <br><br><p>Disponibilidad para cambio de residencia</p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="disponibilidad_residencia" id="inlineRadio1" value="si">
+                                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="disponibilidad_residencia" id="inlineRadio2" value="no">
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                    </div>
                                 
                                     <br><br><p>Domina el Ingles</p>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="ingles" id="inlineRadio1" value="si">
-                                            <label class="form-check-label" for="inlineRadio1">Si</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="ingles" id="inlineRadio2" value="no">
-                                            <label class="form-check-label" for="inlineRadio2">No</label>
-                                        </div> 
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ingles" id="inlineRadio1" value="si">
+                                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ingles" id="inlineRadio2" value="no">
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                    </div> 
 
                                         
                                         <div class="form-row">

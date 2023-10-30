@@ -1,8 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -33,9 +30,8 @@ if(isset($_POST['submit'])){
     //Accesar a la cuenta de Gmail                               
     $mail->Username   = 'sarahireyes700@gmail.com';                    
     $mail->Password   = 'vusf gfyk fqot vmzg';                             
-    $mail->SMTPSecure = 'ssl';            
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMPS;            
     $mail->Port       = 465;                                   
-
     //Recipients
     //Desde donde se va enviar
     $mail->setFrom('sarahireyes700@gmail.com', $nombre);
@@ -43,7 +39,6 @@ if(isset($_POST['submit'])){
     //En este caso a mi como parte de la empresa
     $correo_empresa = 'xitlalireyes70@gmail.com';
     $mail->addAddress($correo_empresa);     
-
     //Content
     $mail->isHTML(true);                                 
     $mail->Subject = 'Correo desde php';

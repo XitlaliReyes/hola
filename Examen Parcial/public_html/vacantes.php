@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estylos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
     <title>Vacantes</title>
     
 </head>
@@ -86,7 +89,7 @@ if (empty($_SESSION["usuario"])) {
         </div>
     </section>
 
-    <section class="section-2 container-fluid p-0">
+    <section class="section-2 container-fluid p-0" id="vacantes">
         <div class="cover">
             <div class="contenido text-center">
                 <h1>Conoce Nuestras Vacantes</h1>
@@ -165,10 +168,14 @@ if (empty($_SESSION["usuario"])) {
                     <p>Completa el formulario para aplicar a una de nuestras vacantes disponibles.</p>
                 </section>
             </div>
+
             <div class="right">
                 <form class="needs-validation" novalidate method="post" action="vistas/Login_form/validar_perfil.php" enctype="multipart/form-data">               
                     <section class="copy">
                         <h3>Únete a CodeCrafters</h3>
+                        <!-- muestra mensaje -->
+                        <div class="error-message-container"></div>
+
                         <div class="apply-container">
                             <div class="form-row nombreV">
                                 <div class="form-group col-md-4">
@@ -282,11 +289,11 @@ if (empty($_SESSION["usuario"])) {
                                 
                                     <br><p>Disponibilidad para viajar</p>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="inlineRadio1" value="si">
+                                        <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="inlineRadio1" value="si" required>
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="inlineRadio2" value="no">
+                                        <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="inlineRadio2" value="no" required>
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
 
@@ -334,11 +341,48 @@ if (empty($_SESSION["usuario"])) {
                     </section>
                 </form>
             </div>
+        
         </div>
     </section>
 
 </main>
-   
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".needs-validation");
+    const errorMessageContainer = document.querySelector(".error-message-container");
+
+    form.addEventListener("submit", function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault(); // Evita el envío del formulario si no es válido
+
+            // Borra cualquier mensaje de error existente
+            errorMessageContainer.innerHTML = "";
+
+            // Itera a través de los campos del formulario
+            const formFields = form.querySelectorAll(".form-control");
+            let hasErrors = false;
+
+            formFields.forEach(function(field) {
+                if (!field.checkValidity()) {
+                    // Muestra un mensaje de error personalizado para el campo
+                    hasErrors = true;
+                }
+            });
+
+            if (hasErrors) {
+                // Muestra un mensaje de error general
+                const errorSpan = document.createElement("span");
+                errorSpan.className = "error-message";
+                errorSpan.innerHTML = '<span class="error-message-text">Por favor, completa todos los campos requeridos.</span>';
+
+                // Muestra el mensaje de error arriba del formulario
+                errorMessageContainer.appendChild(errorSpan);
+            }
+        }
+    });
+});
+</script>
+
 </body>
 <?php
     include "footer.html";    

@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estylos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
     <title>¿Qué hacemos?</title>
     
 </head>
@@ -25,7 +28,6 @@
                 <h1 id="ttl">Transformamos Ideas en Soluciones Digitales</h1>
                 <p id="txt">En nuestra empresa de desarrollo de software, nos apasiona convertir ideas innovadoras en soluciones digitales funcionales y eficaces. Con un equipo de expertos en programación y diseño, trabajamos incansablemente para dar vida a tus conceptos y proyectos. Desde aplicaciones móviles a sistemas empresariales, 
                     nuestra misión es impulsar la innovación y ofrecer soluciones a medida que cumplen y superan tus expectativas. Con nosotros, puedes contar con tecnología de vanguardia, calidad excepcional y un enfoque centrado en tus necesidades. ¡Permítenos ser tu socio en el camino hacia el éxito digital!</p>
-                <button class="btn3" type="button">Ver mas</button>
                 </div>
             <div class="col3 cards">
                 

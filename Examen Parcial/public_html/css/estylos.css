@@ -50,6 +50,37 @@ h5{
 }
 
 
+.escogernos{
+    background: #f8f9fa;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.subtitulo{
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 8%;
+    margin-left: 10px ;
+}
+.escogernos ul li{
+    margin: 10px 0;
+
+}
+.escogernos ul{
+    margin-left: 20px;
+}
+.titulin::before{
+    content: '';
+    background: #7b1798;
+    height: 10px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+}
+
 /* footer */
 
 .footer {
@@ -417,7 +448,10 @@ button.btn-light{
     padding: 20vmin 0;
 
 }
-
+.btn-link a{
+    text-decoration: none;
+    color: inherit;
+}
 .seccion-V .row .col-md-6 .pray img{
     opacity: 0.8;
     width: 90%;
@@ -557,4 +591,10 @@ label{
     border-bottom:5px solid #78407a;
 
     
+}
+
+.error-message-text {
+    font-weight: bold; 
+    display: block; 
+    color: red; 
 }

@@ -375,7 +375,171 @@ text-shadow: 0 0 3px orchid, 0 0 6px orchid;
     height: auto;
 }
 
-.nav-item:hover{
-    font-size: larger;
-    text-shadow:   0 0 3px orchid, 0 0 6px orchid;
+/* vacante */
+:root {
+    --fondo-carrusel: #050505; /* Define una variable para el color de fondo */
+  }
+.carrusel-V{
+    background: #3e3b3f;
+    background: linear-gradient(to right, var(--fondo-carrusel), #59525c);
+    align-items: center;
+}
+.carrusel-V p{
+    letter-spacing: 4px;
+}
+.carrusel-V h1{
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+button.btn-light{
+    border-radius: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.seccion-V{
+    padding: 20vmin 0;
+
+}
+
+.seccion-V .row .col-md-6 .pray img{
+    opacity: 0.8;
+    width: 90%;
+    border-radius: 0.2em;
+}
+.seccion-V .row .col-md-6:last-child{
+    position: relative;
+}
+.seccion-V .row .col-md-6 .panel{
+    position: absolute;
+    top: 7vmin;
+    left: -18vmin;
+    background: white;
+    border-radius: 3px;
+    text-align: left;
+    padding: 13vmin 5vmin 20vmin 10vmin;
+    box-shadow: 0px 25px 42px rgba(0,0,0,0.4);
+}
+.cover{
+    width: 100%;
+    height: 55vmin;
+    background: url('../img/panel.jpg');
+    background-position: -24rem -19rem;
+    background-size: 150%;
+    position: relative;
+    color: #f7f0f0;
+
+}
+.cover .contenido{
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    padding-top: 19vmin;
+}
+
+.rect{
+    position: relative;
+    z-index: 1;
+    background: white;
+   
+    margin: 1rem;
+    box-shadow: 1px 2px 50px 0px rgba(0,0,0,0.4);
+
+    margin-top: -15vmin;
+    border-radius: 8px;
+}
+
+/*formulario*/
+.split-screen{
+    display: flex;
+    margin-top: 100px;
+    padding: 100px;
+}
+.left{
+    height: 200px;
+}
+.left, .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    /* background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5),url('../img/us2.jpg')); */
+    background-image: url(../img/us2.jpg);
+    background-size: cover;
+    flex: 0.6;
+}
+.left .copy{
+    color: #f7f0f0;
+    text-align: center;
+}
+.left p{
+    font-weight: 400;
+}
+
+.right .copy{
+    color: #0e0d0d;
+    text-align: left;
+}
+.right .copy p{
+    margin: 1.5em 0;
+    font-size: medium;
+}
+.right {
+    flex: 2;
+}
+form input[type="text"]
+{
+    display:block; 
+    width: 100%;
+    padding: 1em;
+    margin-bottom: auto;
+    font-size: medium;
+} 
+label{
+    display: block;
+}
+.btn-primary{
+    display: block;
+    width: 100%;
+}
+  
+  /* Estilos para los botones */
+  .btn-primary {
+    background-color: #8E44AD; /* Color lila */
+    border: 1px solid #8E44AD; /* Color lila */
+    border-radius: 3px;
+    color: #FFFFFF;
+  }
+  
+  .btn-primary:hover {
+    background-color: #000000; /* Color negro */
+    border: 1px solid #000000; /* Color negro */
+  }
+  .left, .right{
+    display: flex;
+    height: auto;
+  }
+  /* Estilos para el formulario en general */
+  form {
+    max-width: 900px; 
+  }
+.right p{
+    font-size: 20px;
+    letter-spacing: 2px;
+        background-image: linear-gradient(to right, #302d2d 50%, transparent 50%);
+        background-size: 50% 3px;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        padding-bottom: 5px;
+
+}  
+ 
+.right h3{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom:5px solid #78407a;
+
+    
 }

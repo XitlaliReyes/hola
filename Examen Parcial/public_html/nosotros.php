@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estylos.css">
+    <link rel="stylesheet" href="css/estylos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>¿Qué hacemos?</title>
     
@@ -66,7 +66,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-overlay-3">
-                    <img src="../img/inovacion.png" class="img-fluid" alt="Imagen 3">
+                    <img src="img/inovacion.png" class="img-fluid" alt="Imagen 3">
                     <div class="overlay-3">
                         <h3>ConstrucPro</h3>
                         <p>"ConstrucPro" es una plataforma de software diseñada para la gestión de proyectos de construcción. 
@@ -81,7 +81,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-overlay-2">
-                    <img src="../img/inovacion.png" class="img-fluid" alt="Imagen 3">
+                    <img src="img/inovacion.png" class="img-fluid" alt="Imagen 3">
                     <div class="overlay-2">
                         <h3>NoteMaster</h3>
                         <p>"NoteMaster" es una aplicación de software que ayuda a los usuarios a organizar sus notas, listas de tareas y recordatorios. 
@@ -97,7 +97,7 @@
             <div class="col-md-6">
                 <!-- Imagen a la izquierda, texto a la derecha -->
                 <div class="image-overlay-3">
-                    <img src="../img/inovacion.png" class="img-fluid" alt="Imagen 3">
+                    <img src="img/inovacion.png" class="img-fluid" alt="Imagen 3">
                     
                     <div class="overlay-3">
                        

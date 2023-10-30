@@ -61,9 +61,9 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
     $pdf->SetFont('Arial', 'B', 12); 
     $pdf->Cell(0, 7, "Informacion adicional del aspirante", 0, 1, 'C');
     $pdf->SetFont('Arial', '', 12); 
-    $pdf->Cell(0, 7, "Cuenta con disponibilidad para viajar?: $disponibilidadViajar", 0, 1, 'L');
-    $pdf->Cell(0, 7, "Cuanta con disponibilidad para cambio de residencia?: $disponibilidadResidencia", 0, 1, 'L');
-    $pdf->Cell(0, 7, "Cuenta con un Nbuen nivel de Ingles?: $ingles", 0, 1, 'L');
+    $pdf->Cell(0, 7, "Disponibilidad para viajar: $disponibilidadViajar", 0, 1, 'L');
+    $pdf->Cell(0, 7, "Disponibilidad para cambio de residencia: $disponibilidadResidencia", 0, 1, 'L');
+    $pdf->Cell(0, 7, "Ingles: $ingles", 0, 1, 'L');
     $codigoAleatorio = generarCodigoAleatorio(10);
     $usuario = $_SESSION["usuario"];
     $email = $_SESSION["email"];

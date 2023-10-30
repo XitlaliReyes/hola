@@ -61,9 +61,9 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
     $pdf->SetFont('Arial', 'B', 12); 
     $pdf->Cell(0, 7, "Informacion adicional del aspirante", 0, 1, 'C');
     $pdf->SetFont('Arial', '', 12); 
-    $pdf->Cell(0, 7, "Cuenta con disponibilidad para viajar?: $disponibilidadViajar", 0, 1, 'L');
-    $pdf->Cell(0, 7, "Cuanta con disponibilidad para cambio de residencia?: $disponibilidadResidencia", 0, 1, 'L');
-    $pdf->Cell(0, 7, "Cuenta con un Nbuen nivel de Ingles?: $ingles", 0, 1, 'L');
+    $pdf->Cell(0, 7, "Disponibilidad para viajar: $disponibilidadViajar", 0, 1, 'L');
+    $pdf->Cell(0, 7, "Disponibilidad para cambio de residencia: $disponibilidadResidencia", 0, 1, 'L');
+    $pdf->Cell(0, 7, "Ingles: $ingles", 0, 1, 'L');
     $codigoAleatorio = generarCodigoAleatorio(10);
     $usuario = $_SESSION["usuario"];
     $email = $_SESSION["email"];
@@ -103,8 +103,8 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
         $pdf->Cell(0, 10, "El codigo para realizar el examen es: $codigoAleatorio", 0, 1, 'L');
         $pdf->Ln(55);
         $pdf->Cell(0, 65, "Firma", 0, 1, 'C');    
-        $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,0,'C'); 
-        $pdf->Cell(0,5,'DIRECTOR',0,0,'C'); 
+        $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,1,'C'); 
+        $pdf->Cell(0,5,'DIRECTOR',0,1,'C'); 
     }else{
         $pdf->Cell(0, 10, "Tu codigo ya ha sido asignado, por favor revisa el primer documento generado", 0, 1, 'L');
         $pdf->Ln(55);

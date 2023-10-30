@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,30 +12,27 @@
 	<title>Contactanos</title>
 </head>
 
-
 <body class="conta">
         <main class="enca">
-        <?php 
-            session_start();
+        <?php
             if (empty($_SESSION["usuario"])) {
                 include 'header2.php';
             }else{
                 include 'header3.php';
             }
         ?>
-            <p></p>
         </main>
         <br>
         <div class="contenedor">
 		<div class="formulariou">
-			<h3>¿En que podemos ayudarte?</h3>
+			<h3 class="sos">¿En que podemos ayudarte?</h3>
             <p>Llena nuestro formulario para que uno de nuestros especialistas 
                 se ponga en contacto contigo y podamos agendar tu consultoría gratuita
             </p>
-            <form method="post" action="">
+            <form method="post" action="correo.php">
                 <fieldset class="formu">
                     <input type="text" placeholder="Nombre" id="nombre" name="username" required><br>
-                    <input type="email" placeholder="Correo" id="correo" name="correoe" required><br>
+                    <input type="email" placeholder="Correo" id="correo" name="correo" required><br>
                     <input type="tel" placeholder="Telefono" name="telefono" id="telefono" required><br>
                     <textarea placeholder="Mensaje" id="msj" name="msj"></textarea><br>
                     <input type="submit" value="Enviar" class="boton">
@@ -46,7 +46,7 @@
 		</div>
 		<div class="cont3">
             <p><i class="fas fa-envelope-open fa-lg" style="color: #00d5ff;"></i></p>
-			<p>Nuestro correo<br><span style="color: aqua;">hola@maindsoft.net</span></p>
+			<p>Nuestro correo<br><span style="color: aqua;">codecrafters@gmail.com</span></p>
 		</div>
 		<div class="cont4">
             <p><i class="fas fa-phone fa-lg" style="color: #00ffee;"></i></p>
@@ -61,6 +61,5 @@
             <?php
             include "footer.html";    
             ?>
-            <p></p>
         </footer>
 </body>

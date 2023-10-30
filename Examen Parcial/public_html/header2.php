@@ -57,11 +57,20 @@
             </div>
             <form class="form" role="form" action="vistas/Login_form/registro.php" method="post">
             <div class="modal-body">
-            
-                <p>Nombre de usuario: <input type="text" name="login"> </p>
-                <p>Email: <input type="email" name="email"> </p>
-                <p>Contraseña: <input type="text" name="contra"> </p>
-             
+             <table>   
+            <tr>
+                        <td><p>Nombre de usuario: </p></td>
+                        <td><input type="text" name="login"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Email: </p></td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Contraseña: </p></td>
+                        <td><input type="text" name="contra"></td>
+                    </tr>
+                </table>    
                 
             </div>
             <div class="modal-footer">                

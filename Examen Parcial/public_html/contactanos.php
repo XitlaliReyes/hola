@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/estylos.css">
 	<title>Contactanos</title>
 </head>
-
+f
 
 <body class="conta">
         <main class="enca">
@@ -53,6 +53,11 @@
             <p><i class="fas fa-phone fa-lg" style="color: #00ffee;"></i></p>
             <p>Telefono de contacto<br><span style="color: aqua;">+777 - 333 893 8273</span>
             </p>
+        </div>
+        <div class="inte">
+            <p><img src="../public_html/img/Chris.jpg" width="100" height="100" alt="holis">Christopher Martinez Gonzalez <br><a href=""><i class="fab fa-instagram fa-1x" style="color: #CE95D8;"></i></a></p>
+            <p><img src="" alt="holis 2"><br>Valeria Nuñez de Lira <br><a href="#"><i class="fab fa-instagram fa-1x" style="color: #CE95D8;"></i></a></p>
+            <p><img src="" alt="holis 3"><br>Xitlali Sarahi Reyes Reyes <br><a href="#"><i class="fab fa-instagram fa-1x" style="color: #CE95D8;"></i></a></p>
         </div>
         <div class="mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.6065951680607!2d-102.31435082546328!3d21.911219956887034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429eee2cf15dd8d%3A0x8d9aee56554924bd!2sAvenida%20Universidad%20940%2C%20Bosques%20del%20Prado%20Sur%2C%2020100%20Aguascalientes%2C%20Ags.!5e0!3m2!1ses-419!2smx!4v1698596815907!5m2!1ses-419!2smx" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

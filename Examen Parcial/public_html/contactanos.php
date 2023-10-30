@@ -20,12 +20,11 @@
                 include 'header3.php';
             }
         ?>
-            <p></p>
         </main>
         <br>
         <div class="contenedor">
 		<div class="formulariou">
-			<h3>¿En que podemos ayudarte?</h3>
+			<h3 class="sos">¿En que podemos ayudarte?</h3>
             <p>Llena nuestro formulario para que uno de nuestros especialistas 
                 se ponga en contacto contigo y podamos agendar tu consultoría gratuita
             </p>
@@ -46,7 +45,7 @@
 		</div>
 		<div class="cont3">
             <p><i class="fas fa-envelope-open fa-lg" style="color: #00d5ff;"></i></p>
-			<p>Nuestro correo<br><span style="color: aqua;">hola@maindsoft.net</span></p>
+			<p>Nuestro correo<br><span style="color: aqua;">codecrafters@gmail.com</span></p>
 		</div>
 		<div class="cont4">
             <p><i class="fas fa-phone fa-lg" style="color: #00ffee;"></i></p>
@@ -61,6 +60,5 @@
             <?php
             include "footer.html";    
             ?>
-            <p></p>
         </footer>
 </body>

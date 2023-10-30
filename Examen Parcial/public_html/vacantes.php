@@ -32,9 +32,22 @@ if (empty($_SESSION["usuario"])) {
         <div class="row">
             <div class="col-md-7 col-sm-12">
                 <br><br>
-                <?php echo "<br><br><h1 style='color:white;'>Bienvenido(a) " . $_SESSION["usuario"] . "</h1>"; ?>
+                <?php 
+                date_default_timezone_set('America/Mexico_City'); // Configura la zona horaria
+                
+                $hora = date("G"); // Obtiene la hora en formato de 24 horas
+                $saludo = '';
+                if ($hora >= 5 && $hora < 12) {
+                    $saludo = "Buenos días";
+                } elseif ($hora >= 12 && $hora < 19) {
+                    $saludo = "Buenas tardes";
+                } else {
+                    $saludo = "Buenas noches";
+                }
+                echo "<br><br><h1 style='color:white;'>$saludo " . $_SESSION["usuario"] . " bienvenido(a).</h1>"; ?>
                 <p style="color:aliceblue">Únete a Nuestra Aventura en CodeCrafters!</p>
                 <button class="btn btn-light px-5 py-2">Revisar Vacantes</button>
+                <button class="btn btn-light px-5 py-2" action="">Aplicar Examen</button>
             </div>
             <div class="col-md-5 col-sm-12">
                 <img src="img/software.png" alt="hola" class="img-fluid">
@@ -267,7 +280,7 @@ if (empty($_SESSION["usuario"])) {
                                         </div>
                                 </div>
                                 
-                                <br><p>Disponibilidad para viajar</p>
+                                    <br><p>Disponibilidad para viajar</p>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="inlineRadio1" value="si" required>
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
@@ -276,16 +289,26 @@ if (empty($_SESSION["usuario"])) {
                                         <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="inlineRadio2" value="no" required>
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
+
+                                    <br><br><p>Disponibilidad para cambio de residencia</p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="disponibilidad_residencia" id="inlineRadio1" value="si">
+                                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="disponibilidad_residencia" id="inlineRadio2" value="no">
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                    </div>
                                 
                                     <br><br><p>Domina el Ingles</p>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="ingles" id="inlineRadio1" value="si" required>
-                                            <label class="form-check-label" for="inlineRadio1">Si</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="ingles" id="inlineRadio2" value="no" required>
-                                            <label class="form-check-label" for="inlineRadio2">No</label>
-                                        </div> 
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ingles" id="inlineRadio1" value="si">
+                                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ingles" id="inlineRadio2" value="no">
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                    </div> 
 
                                         
                                         <div class="form-row">

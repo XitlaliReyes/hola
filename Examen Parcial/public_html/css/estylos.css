@@ -163,6 +163,7 @@ ul li {
     'formulariou cont2 '
     'formulariou cont3 '
     'formulariou cont4 '
+    'inte inte'
     'mapa mapa'
     'pdp pdp';
 }
@@ -174,7 +175,8 @@ ul li {
 .contenedor .cont3,
 .contenedor .cont4,
 .contenedor .formulariou,
-.contenedor .mapa
+.contenedor .inte,
+.contenedor .mapa,
 .contenedor .pdp{
     background-color: rgba(97, 92, 92, 0.4);
     color: white;
@@ -224,6 +226,19 @@ text-shadow: 0 0 3px orchid, 0 0 6px orchid;
     text-align: center;
     width: 800px;
 }
+
+.inte {
+    grid-area: inte;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.inte p{
+    border: 3px solid aqua;
+    border-radius: 5px;
+}
+
 .mapa{ grid-area: mapa;}
 .pdp{ grid-area: footer; }
 

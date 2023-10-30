@@ -102,7 +102,7 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
         fwrite($file, $usuario . " " . $codigoAleatorio . " " . $email . " false\r\n");
         $pdf->Cell(0, 10, "El codigo para realizar el examen es: $codigoAleatorio", 0, 1, 'L');
         $pdf->Ln(55);
-        $pdf->Cell(0, 65, "Firma", 0, 1, 'C');    
+        $pdf->Cell(0, 10, "Firma", 0, 1, 'C');    
         $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,1,'C'); 
         $pdf->Cell(0,5,'DIRECTOR',0,1,'C'); 
     }else{

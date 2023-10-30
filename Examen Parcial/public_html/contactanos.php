@@ -5,23 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-	<link rel="stylesheet" href="../css/estylos.css">
+	<link rel="stylesheet" href="css/estylos.css">
 	<title>Contactanos</title>
 </head>
 
 
 <body class="conta">
         <main class="enca">
-            <?php
-                include "../header.html";
-                // session_start();
-                // if (empty($_SESSION["usuario"])) {
-                //     header("../../header2.php");
-                //     exit();
-                // }else{
-                //     require 'header3.php';
-                // }
-            ?>
+        <?php 
+            session_start();
+            if (empty($_SESSION["usuario"])) {
+                include 'header2.php';
+            }else{
+                include 'header3.php';
+            }
+        ?>
             <p></p>
         </main>
         <br>
@@ -61,7 +59,7 @@
 	</div>
     <footer class="pdp">
             <?php
-            include "../footer.html";    
+            include "footer.html";    
             ?>
             <p></p>
         </footer>

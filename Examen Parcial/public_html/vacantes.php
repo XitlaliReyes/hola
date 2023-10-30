@@ -3,7 +3,7 @@
 ob_start(); //por si no funciona el header location (activa almacenamiento en buffer de salida)
 $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"]; //nombre del servidor(dominio) en el que estas actualmente
 session_start();
-require 'header3.php';
+include 'header3.php';
 
 ?>
 
@@ -14,7 +14,7 @@ require 'header3.php';
 # Iniciar sesión para usar $_SESSION
 
 if (empty($_SESSION["usuario"])) {
-    header("../../index.php");
+    header("index.php");
     exit();
 }
 
@@ -62,7 +62,7 @@ En Codecrafters, te unirás a un equipo apasionado de profesionales de desarroll
 <details>
     <summary>Se parte de nuestro equipo</summary>
     <h3>Llena el siguiente formulario</h3>
-    <form class="needs-validation" novalidate method="post" action="validar_perfil.php" enctype="multipart/form-data">
+    <form class="needs-validation" novalidate method="post" action="vistas/Login_form/validar_perfil.php" enctype="multipart/form-data">
     <div class="form-row">
         <div class="form-group col-md-4">
         <label for="Nombre">Nombre</label>
@@ -230,5 +230,7 @@ En Codecrafters, te unirás a un equipo apasionado de profesionales de desarroll
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 </details>
-
 </body>
+<?php
+    include "footer.html";    
+?>

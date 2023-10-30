@@ -8,8 +8,13 @@
     
 </head>
 <body>
-    <?php
-        include "../header.html";
+    <?php 
+        session_start();
+        if (empty($_SESSION["usuario"])) {
+            include 'header2.php';
+        }else{
+            include 'header3.php';
+        }
     ?>
     <div class="container3">
         <div class="row3">
@@ -42,7 +47,7 @@
         </div>
     </div>
     <?php
-        include "../footer.html";    
+        include "footer.html";    
     ?>
 </body>
 </html>

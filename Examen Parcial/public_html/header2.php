@@ -60,15 +60,15 @@
              <table>   
             <tr>
                         <td><p>Nombre de usuario: </p></td>
-                        <td><input type="text" name="login"></td>
+                        <td><input type="text" name="login" required></td>
                     </tr>
                     <tr>
                         <td><p>Email: </p></td>
-                        <td><input type="email" name="email"></td>
+                        <td><input type="email" name="email" required></td>
                     </tr>
                     <tr>
                         <td><p>Contraseña: </p></td>
-                        <td><input type="text" name="contra"></td>
+                        <td><input type="text" name="contra" required></td>
                     </tr>
                 </table>    
                 

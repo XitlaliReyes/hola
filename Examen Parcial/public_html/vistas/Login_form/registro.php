@@ -3,6 +3,9 @@
 require '../../header2.php';;
 
 ?>
+<head>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+</head>
 <body>
 <div style="margin:100px;">
 <?php
@@ -34,7 +37,7 @@ require '../../header2.php';;
         echo "<br> Cuenta dada de alta <br>";
     }
     fclose($file);
-    echo "<br><a href='../../index.php'>regresar</a>";
+    echo "<br><a href='../../index.php'>Regresar</a>";
 
 ?>
 </div>

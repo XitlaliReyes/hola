@@ -26,8 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["file"]) && !(empty($_
 
 if ($bandera) {
     require 'generarpdf_cc.php';
-}else{
-    echo 'Sube una imagen de tu perfil por favor';
 }
 ?>
 

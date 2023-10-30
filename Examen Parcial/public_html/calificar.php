@@ -47,7 +47,7 @@ $puntaje = ($respuestas_correctas / $total_preguntas) * 100;
 ?>
 
 <?php
-if ($puntaje >= 7) {
+if ($puntaje >= 70) {
 ?>
 <div class="res">
 <div style="margin:200px" class="alert alert-success" role="alert">

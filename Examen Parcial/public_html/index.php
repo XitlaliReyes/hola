@@ -9,7 +9,6 @@
 <body>
     
     <?php 
-    session_start();
     if (!empty($_SESSION["usuario"])) {
         require 'header3.php';
     }else{

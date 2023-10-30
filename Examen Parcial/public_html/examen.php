@@ -49,24 +49,25 @@ shuffle($indices); // Mezclar los índices
 <fieldset>
 <legend>Examen de Conocimientos</legend>
 <?php
+$cont=1;
 foreach ($indices as $indice) {
     $pregunta = $preguntas[$indice];
     $respuestas = $examen[$pregunta];
     echo "<br><br>";
-    echo "<h5>$pregunta</h5>";
+    echo "<h5>".$cont.".-".$pregunta."</h5>";
     
     // Puedes mezclar las respuestas aquí si lo deseas
     shuffle($respuestas);
-    
+    $cont++;
     foreach ($respuestas as $respuesta) {
         ?>
 
     
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="<?php echo $pregunta; ?>" id="<?php echo $pregunta . '-' . $respuesta; ?>" value="<?php echo $respuesta; ?>">
-        <label class="form-check-label" for="<?php echo $pregunta . '-' . $respuesta; ?>"><?php echo $respuesta; ?></label>
+        <label class="form-check-label" for="<?php echo $pregunta . '-' . $respuesta; ?>"><?php echo $respuesta;?></label>
     </div>
-
+        
 <?php 
     }
 }

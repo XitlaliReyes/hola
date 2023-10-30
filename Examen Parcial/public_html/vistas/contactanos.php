@@ -14,6 +14,13 @@
         <main class="enca">
             <?php
                 include "../header.html";
+                // session_start();
+                // if (empty($_SESSION["usuario"])) {
+                //     header("../../header2.php");
+                //     exit();
+                // }else{
+                //     require 'header3.php';
+                // }
             ?>
             <p></p>
         </main>

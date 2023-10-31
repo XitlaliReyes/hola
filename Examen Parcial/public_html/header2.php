@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(0, 0, 0, 0.7);" role="navigation">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/favicon.png" alt="logo" class="w-25"></a>
+        <a class="navbar-brand" href="index.php"><img src="img/favicon.png" alt="logo" class="w-25"></a>
         <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
             &#9776;
         </button>

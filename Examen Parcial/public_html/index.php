@@ -25,7 +25,7 @@
     require 'vistas/inicio.html';
     //Configura la zona horaria adecuada en tu script PHP
     date_default_timezone_set('America/Mexico_City'); // Configura la zona horaria
-
+    
     $archivo_actual = __FILE__; // Obtiene el nombre del archivo actual
     $ultimaActualizacion = date('d/m/Y H:i:s', filemtime($archivo_actual));
     echo "<p style='background:black; color:white; margin:0px; padding-left:10px;'>Fecha de última actualización: $ultimaActualizacion</p>";

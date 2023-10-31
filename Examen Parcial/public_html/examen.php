@@ -22,6 +22,17 @@
             font-weight: bold;
             color: #07373E;
         }
+        td{
+            text-align: center;
+        }
+        .info{
+            text-align: justify;
+        }
+        .warn{
+            font-weight: bold;
+            color: maroon;
+            font-size: larger;
+        }
     </style>
 </head>
 
@@ -50,6 +61,24 @@ shuffle($indices); // Mezclar los índices
 <legend>Examen de Conocimientos</legend>
 <?php
 $cont=1;
+echo "<br>";
+echo "<table>";
+echo "<tr>";
+echo "<td> Fecha de presentacion del examen : ".date('d/m/Y'); " </td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td> INDICACIONES: </td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td class='info'> En el siguiente examen apareceran 10 preguntas, donde debes elegir la opcion correcta 
+de cuatro opciones disponibles de cada pregunta. La calificacion minima aprobatoria es de 
+7, lo que quiere decir que debes tener correctas al menos 7 preguntas. </td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td class='warn'><br> Recuerda que solo puedes responder el examen una vez </td>";
+echo "</tr>";
+echo "</table>";
+
 foreach ($indices as $indice) {
     $pregunta = $preguntas[$indice];
     $respuestas = $examen[$pregunta];

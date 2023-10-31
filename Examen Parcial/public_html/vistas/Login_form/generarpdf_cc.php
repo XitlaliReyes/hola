@@ -65,6 +65,11 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
     $pdf->Cell(0, 7, "Disponibilidad para cambio de residencia: $disponibilidadResidencia", 0, 1, 'L');
     $pdf->Cell(0, 7, "Ingles: $ingles", 0, 1, 'L');
     $codigoAleatorio = generarCodigoAleatorio(10);
+    $pdf->Cell(0, 10, "El codigo para realizar el examen es: $codigoAleatorio", 0, 1, 'L');
+    $pdf->Ln(55);
+    $pdf->Cell(0, 10, "Firma", 0, 1, 'C');    
+    $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,1,'C'); 
+    $pdf->Cell(0,5,'DIRECTOR',0,1,'C'); 
     $usuario = $_SESSION["usuario"];
     $email = $_SESSION["email"];
     $archivo = "archivo1.txt";
@@ -89,7 +94,6 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
                 $encontrado = true;
                 break;
             }
-
             if ($codigo === $codigoAleatorio) {
                 // Si el código ya existe en el archivo, genera uno nuevo y reinicia el bucle
                 $codigoAleatorio = generarCodigoAleatorio(10);
@@ -100,17 +104,8 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
 
     if (!$encontrado) {
         fwrite($file, $usuario . " " . $codigoAleatorio . " " . $email . " false\r\n");
-        $pdf->Cell(0, 10, "El codigo para realizar el examen es: $codigoAleatorio", 0, 1, 'L');
-        $pdf->Ln(55);
-        $pdf->Cell(0, 10, "Firma", 0, 1, 'C');    
-        $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,1,'C'); 
-        $pdf->Cell(0,5,'DIRECTOR',0,1,'C'); 
     }else{
         $pdf->Cell(0, 10, "Tu codigo ya ha sido asignado, por favor revisa el primer documento generado", 0, 1, 'L');
-        $pdf->Ln(55);
-        $pdf->Cell(0, 10, "Firma", 0, 1, 'C');    
-        $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,1,'C'); 
-        $pdf->Cell(0,5,'DIRECTOR',0,1,'C'); 
     }
     
     fclose($file);

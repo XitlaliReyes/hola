@@ -14,7 +14,6 @@ class PDF extends FPDF
         {
             $this->SetFont('Arial', 'I', 8);
             $this->Cell(0, 10, 'CODECRAFTERS', 0, 1, 'C');
-            $this->Ln(15); 
         }
     
         function Footer()
@@ -49,13 +48,13 @@ class PDF extends FPDF
     $puesto = $_POST['puesto'];
     $cod = '';
 
-    $pdf->Image("$oppa", 75, 220, 50, 50, 'JPG');
+    $pdf->Image("$oppa", 90, 50, 25, 30, 'JPG');
     $pdf->Line(70, 250, 140, 250);
     $pdf->SetFont('Arial', '', 12); 
     $pdf->Cell(0, 10, "Solicitud de Puesto en Codecrafters", 0, 1, 'C');
-    $pdf->Cell(0, 10, "Por medio del presente documento, solicito el puesto de:", 0, 1, 'C');
-    $pdf->MultiCell(0, 10, $puesto, 0, 'C');
-    $pdf->Cell(0, 10,"El dia de ".date('d/m/Y'),0,1,'C');
+    $pdf->Cell(0, 10, "Imagen del aspirante", 0, 1, 'C');
+    $pdf->Ln(35);
+    $pdf->Cell(0, 5,"El dia de ".date('d/m/Y'),0,1,'C');
     $pdf->SetFont('Arial', 'B', 12); 
     $pdf->Cell(0, 10, "Informacion del Aspirante:", 0, 1, 'C');
     $pdf->SetFont('Arial', '', 12); 

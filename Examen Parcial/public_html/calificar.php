@@ -93,7 +93,7 @@ $mail = new PHPMailer(true);
     $mail->Port       = 465;   // El puerto SMTP puede variar según tu proveedor de correo
 
 //remitente
-$mail->setFrom('sarahireyes700@gmail.com', 'CodeCrafters');
+$mail->setFrom('sarahireyes700@gmail.com', 'Vexcode');
 
 $mail->addAddress($_SESSION['email']); // Usamos el correo almacenado en la sesión
 
@@ -114,7 +114,7 @@ Nuevamente, felicidades por tu logro y esperamos hablar contigo pronto.
 Atentamente,
 
 Recursos Humanos
-CodeCrafters ';
+Vexcode ';
 
 } else {
     $mensaje = 'Estimado ' . $_SESSION['usuario'] . ',
@@ -132,7 +132,7 @@ Te deseamos mucho éxito en tus futuros empeños y proyectos profesionales.
 Atentamente,
 
 Recursos Humanos
-CodeCrafters 
+Vexcode
 ';
 
 }

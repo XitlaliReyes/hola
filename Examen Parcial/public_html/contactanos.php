@@ -50,7 +50,7 @@
 		</div>
 		<div class="cont3">
             <p><i class="fas fa-envelope-open fa-lg" style="color: #00d5ff;"></i></p>
-			<p>Nuestro correo<br><span style="color: aqua;">codecrafters@gmail.com</span></p>
+			<p>Nuestro correo<br><span style="color: aqua;">Vexcode@gmail.com</span></p>
 		</div>
 		<div class="cont4">
             <p><i class="fas fa-phone fa-lg" style="color: #00ffee;"></i></p>

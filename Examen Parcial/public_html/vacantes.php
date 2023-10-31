@@ -48,7 +48,7 @@ if (empty($_SESSION["usuario"])) {
                     $saludo = "Buenas noches";
                 }
                 echo "<br><br><h1 style='color:white;'>$saludo " . $_SESSION["usuario"] . " bienvenido(a).</h1>"; ?>
-                <p style="color:aliceblue">Únete a Nuestra Aventura en CodeCrafters!</p>
+                <p style="color:aliceblue">Únete a Nuestra Aventura en Vexcode!</p>
                 <button class="btn btn-light btn-link px-5 py-2" ><a href="#vacantes">LLenar Formulario</a></button>
                 <button onclick="window.location.href = 'ingresar_codigo.php';" class="btn btn-light px-5 py-2">Aplicar Examen</button>
             </div>
@@ -71,16 +71,16 @@ if (empty($_SESSION["usuario"])) {
                 </div>
                 <div class="col-md-6" id="elemento2">
                     <div class="panel text-left">
-                        <h1>Codecrafters: Donde la Innovación y la Creatividad se Unen</h1>
-                        <p class="pt-4">En Codecrafters, nos enorgullece ofrecer una variedad de beneficios para nuestros empleados. Algunos de los beneficios que disfrutarás como parte de nuestro equipo incluyen:
+                        <h1>Vexcode: Donde la Innovación y la Creatividad se Unen</h1>
+                        <p class="pt-4">En Vexcode, nos enorgullece ofrecer una variedad de beneficios para nuestros empleados. Algunos de los beneficios que disfrutarás como parte de nuestro equipo incluyen:
                             <ul>
                                 <li>Seguro de Salud Completo: Ofrecemos un sólido plan de seguro médico y dental para nuestros empleados y sus familias.</li>
                                 <li>Desarrollo Profesional: Invertimos en tu crecimiento profesional, ofreciendo oportunidades de capacitación y desarrollo continuo.</li>
                                 <li>Horario Flexible: Entendemos la importancia del equilibrio entre trabajo y vida personal. Ofrecemos horarios flexibles y opciones de trabajo remoto.</li>
                             </ul>
                         </p>
-                        <p> En Codecrafters, valoramos la innovación, la creatividad y la excelencia en el desarrollo de software. Nuestra cultura fomenta un ambiente de trabajo colaborativo y de aprendizaje continuo. 
-                            En Codecrafters, te unirás a un equipo apasionado de profesionales de desarrollo de software que comparten una visión común: impulsar la innovación a través de la tecnología. ¡Esperamos verte crecer y prosperar en Codecrafters mientras contribuyes a nuestra misión de transformar ideas en soluciones tecnológicas excepcionales!
+                        <p> En Vexcode, valoramos la innovación, la creatividad y la excelencia en el desarrollo de software. Nuestra cultura fomenta un ambiente de trabajo colaborativo y de aprendizaje continuo. 
+                            En Vexcode, te unirás a un equipo apasionado de profesionales de desarrollo de software que comparten una visión común: impulsar la innovación a través de la tecnología. ¡Esperamos verte crecer y prosperar en Vexcode mientras contribuyes a nuestra misión de transformar ideas en soluciones tecnológicas excepcionales!
                         </p>
 
                     </div>
@@ -164,7 +164,7 @@ if (empty($_SESSION["usuario"])) {
         <div class="split-screen"  id="vacantes">
             <div class="left">
                 <section class="copy">
-                    <h5 >Aplicación para Vacante en CodeCrafters</h5>
+                    <h5 >Aplicación para Vacante en Vexcode</h5>
                     <p>Completa el formulario para aplicar a una de nuestras vacantes disponibles.</p>
                 </section>
             </div>
@@ -172,7 +172,7 @@ if (empty($_SESSION["usuario"])) {
             <div class="right">
                 <form class="needs-validation" novalidate method="post" action="vistas/Login_form/validar_perfil.php" enctype="multipart/form-data">               
                     <section class="copy">
-                        <h3>Únete a CodeCrafters</h3>
+                        <h3>Únete a Vexcode</h3>
                         <!-- muestra mensaje -->
                         <div class="error-message-container"></div>
 

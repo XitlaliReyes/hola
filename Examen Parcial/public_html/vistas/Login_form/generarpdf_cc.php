@@ -13,7 +13,7 @@ class PDF extends FPDF
         function Header()
         {
             $this->SetFont('Arial', 'I', 8);
-            $this->Cell(0, 10, 'CODECRAFTERS', 0, 1, 'C');
+            $this->Cell(0, 10, 'Vexcode', 0, 1, 'C');
         }
     
         function Footer()
@@ -51,7 +51,7 @@ class PDF extends FPDF
     $pdf->Image("$oppa", 90, 50, 25, 30, 'JPG');
     $pdf->Line(70, 250, 140, 250);
     $pdf->SetFont('Arial', '', 12); 
-    $pdf->Cell(0, 10, "Solicitud de Puesto en Codecrafters", 0, 1, 'C');
+    $pdf->Cell(0, 10, "Solicitud de Puesto en Vexcode", 0, 1, 'C');
     date_default_timezone_set('America/Mexico_City'); // Configura la zona horaria
     $archivo_actual = __FILE__; // Obtiene el nombre del archivo actual
     $ultimaActualizacion = date('d/m/Y H:i:s', filemtime($archivo_actual));
@@ -61,7 +61,7 @@ class PDF extends FPDF
     $pdf->SetFont('Arial', 'B', 12); 
     $pdf->Cell(0, 10, "Informacion del Aspirante:", 0, 1, 'C');
     $pdf->SetFont('Arial', '', 12); 
-    $pdf->MultiCell(0, 7, "El aspirante,  $nombre $apellidoPaterno $apellidoMaterno, por medio del presente documento, solicita el puesto de: '$puesto' para  tener la posibilidad de contribuir a la mision de Codecrafters y formar parte de un equipo con dedicacion. 
+    $pdf->MultiCell(0, 7, "El aspirante,  $nombre $apellidoPaterno $apellidoMaterno, por medio del presente documento, solicita el puesto de: '$puesto' para  tener la posibilidad de contribuir a la mision de Vexcode y formar parte de un equipo con dedicacion. 
 Con el telefono: $telefono
 Posicion deseada: $puesto 
 Fecha de nacimiento: $diaNacimiento/$mesNacimiento/$aNacimiento

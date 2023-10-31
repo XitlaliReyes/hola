@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(0, 0, 0, 0.7);" role="navigation">
     <div class="container">
-        <a class="navbar-brand" href="#">Menu</a>
+        <a class="navbar-brand" href="#"><img src="img/favicon.png" alt="logo" class="w-25"></a>
         <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
             &#9776;
         </button>
@@ -23,7 +23,7 @@
                     <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle text-white">Login <span class="caret"></span></button>
                     <ul class="dropdown-menu dropdown-menu-right mt-2">
                        <li class="px-3 py-2">
-                           <form class="form" role="form" action="vistas/Login_form/login.php" method="post">
+                           <form class="form" role="form" action="login.php" method="post">
                                 <div class="form-group">
                                     <input name="usuario" id="usr" placeholder="Usuario" class="form-control form-control-sm" type="text" required="">
                                 </div>
@@ -55,7 +55,7 @@
                 <h3>Registro</h3>
                 <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
-            <form class="form" role="form" action="vistas/Login_form/registro.php" method="post">
+            <form class="form" role="form" action="registro.php" method="post">
             <div class="modal-body">
              <table>   
             <tr>

@@ -231,7 +231,6 @@ text-shadow: 0 0 3px orchid, 0 0 6px orchid;
     grid-area: inte;
     display: flex;
     flex-direction: row; 
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 .inte p{

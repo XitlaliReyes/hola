@@ -2,7 +2,7 @@
 session_start();
 ob_start(); //por si no funciona el header location (activa almacenamiento en buffer de salida)
 $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"]; //nombre del servidor(dominio) en el que estas actualmente
-require '../../header2.php';
+require 'header2.php';
 
 ?>
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ require '../../header2.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/estylos.css">
+    <link rel="stylesheet" href="css/estylos.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@ require '../../header2.php';
     $password = $_POST["palabra_secreta"];
 
 
-    $file = fopen("archivo.txt", "r");
+    $file = fopen("vistas/Login_form/archivo.txt", "r");
     $band = 0; //para saber si la cuenta y contrasena estan en el archivo
     while (!feof($file)) {
         $linea = fgets($file);
@@ -49,7 +49,7 @@ require '../../header2.php';
 
         # Luego redireccionamos a la pagina "Secreta"
         # redireccionamiento con php
-        header("Location: ../../vacantes.php");
+        header("Location: vacantes.php");
         // require 'vacantes.php';
         //header("Location:".$base_url."secreta.php");
 
@@ -65,5 +65,5 @@ require '../../header2.php';
             echo '</button>';
         echo "</div>";
     }
-    require '../../footer.html';
+    require 'footer.html';
 ?>

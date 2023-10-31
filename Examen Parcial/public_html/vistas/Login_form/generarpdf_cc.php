@@ -52,12 +52,9 @@ class PDF extends FPDF
     $pdf->Line(70, 250, 140, 250);
     $pdf->SetFont('Arial', '', 12); 
     $pdf->Cell(0, 10, "Solicitud de Puesto en Codecrafters", 0, 1, 'C');
-    $pdf->Cell(0, 10, "Por medio del presente documento, solicito el puesto de:", 0, 1, 'C');
-    $pdf->MultiCell(0, 10, $puesto, 0, 'C');
     date_default_timezone_set('America/Mexico_City'); // Configura la zona horaria
     $archivo_actual = __FILE__; // Obtiene el nombre del archivo actual
     $ultimaActualizacion = date('d/m/Y H:i:s', filemtime($archivo_actual));
-    $pdf->Cell(0, 10,"El dia de ".date('d/m/Y'),0,1,'C');
     $pdf->Cell(0, 10, "Imagen del aspirante", 0, 1, 'C');
     $pdf->Ln(35);
     $pdf->Cell(0, 5,"El dia de ".date('d/m/Y'),0,1,'C');
@@ -76,10 +73,6 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
     $pdf->Cell(0, 7, "Disponibilidad para viajar: $disponibilidadViajar", 0, 1, 'L');
     $pdf->Cell(0, 7, "Disponibilidad para cambio de residencia: $disponibilidadResidencia", 0, 1, 'L');
     $pdf->Cell(0, 7, "Ingles: $ingles", 0, 1, 'L');
-    $pdf->Ln(55);
-    $pdf->Cell(0, 10, "Firma", 0, 1, 'C');    
-    $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,1,'C'); 
-    $pdf->Cell(0,5,'DIRECTOR',0,1,'C');
     $codigoAleatorio = generarCodigoAleatorio(10);
     $usuario = $_SESSION["usuario"];
     $email = $_SESSION["email"];
@@ -119,7 +112,10 @@ $nombre $apellidoPaterno $apellidoMaterno es un profesional con experiencia en l
     }else{
         $pdf->Cell(0, 10, "Tu codigo ya ha sido asignado, por favor revisa el primer documento generado", 0, 1, 'L');
     }
-    
+    $pdf->Ln(55);
+    $pdf->Cell(0, 10, "Firma", 0, 1, 'C');    
+    $pdf->Cell(0,5,'Christopher Martinez Gonzalez',0,1,'C'); 
+    $pdf->Cell(0,5,'DIRECTOR',0,1,'C');
     fclose($file);
     function generarCodigoAleatorio($longitud) {
         $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+=-';

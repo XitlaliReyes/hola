@@ -1,4 +1,10 @@
 <?php
+    $ori=$_FILES['file']['name'];
+    $directorio_imagen = "perfiles/"; 
+    $nombre_original = $ori;
+    $nuevo_nombre = "perfil.jpg"; 
+    rename($directorio_imagen . $nombre_original, $directorio_imagen . $nuevo_nombre);
+    $oppa=$directorio_imagen.$nuevo_nombre;
 header('Content-Type: text/html; charset=UTF-8');
 require('fpdf/fpdf.php');
 //Generar PDF
@@ -42,7 +48,8 @@ class PDF extends FPDF
     $ingles = $_POST['ingles'];
     $puesto = $_POST['puesto'];
     $cod = '';
-    
+
+    $pdf->Image("$oppa", 75, 220, 50, 50, 'JPG');
     $pdf->Line(70, 250, 140, 250);
     $pdf->SetFont('Arial', '', 12); 
     $pdf->Cell(0, 10, "Solicitud de Puesto en Codecrafters", 0, 1, 'C');

@@ -1,10 +1,8 @@
 <?php
- 
-require '../../header2.php';;
-
+require 'header2.php';;
 ?>
 <head>
-    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 <div style="margin:100px;">
@@ -15,7 +13,7 @@ require '../../header2.php';;
     $email = $_POST["email"];
     $bandera = false;
      
-    $file = fopen("archivo.txt","a+");
+    $file = fopen("vistas/Login_form/archivo.txt","a+");
     while (!feof($file)) {
         $linea = fgets($file);
         if ($linea != "") {
@@ -37,7 +35,7 @@ require '../../header2.php';;
         echo "<br> Cuenta dada de alta <br>";
     }
     fclose($file);
-    echo "<br><a href='../../index.php'>Regresar</a>";
+    echo "<br><a href='index.php'>Regresar</a>";
 
 ?>
 </div>
